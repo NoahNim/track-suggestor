@@ -9,13 +9,19 @@
   </head>
   <body>
     <div class="container">
+      <div class="border border-primary rounded">
+        <h1>Coding Language Track Course Selector!</h1>
+        <p>Greetings, and welcome to the CLTCS (Coding Language Tract Selector).</p>
+        <p>I am a highly advanced artificial intelligence designed to help you choose what programming language is best for you!</p>
+      </div>
+
       <form id="track-survey">
-        <div class="form-group">
+        <div class="form-group form-inline border border-secondary rounded" id="name-input">
           <label for="name"><h3>What is your name?</h3></label>
           <input id="user-name" class="form-control" type="text">
         </div>
 
-        <div class="form group">
+        <div class="form-group border border-secondary rounded">
           <h3>Do you have any coding experience?</h3>
           <select class="experience" id="user-experience">
             <option value="Yes">Yes</option>
@@ -23,12 +29,12 @@
           </select>
         </div>
 
-        <div class="form-groupr" id="fav-color">
+        <div class="form-group form-inline border border-secondary rounded" id="fav-color">
           <label for="favorite-color"><h3>What is your favorite color?</h3><p>(This is important for us to do a precise calculation, so don't lie!)</p></label>
-          <input class="form-control" type="text">
+          <input class="form-control text-center" type="text" id="user-color">
         </div>
 
-        <div class="form-group" id="moon">
+        <div class="form-group border border-secondary rounded" id="moon">
           <label for="image-test"><h4>Please tell us what planet this moon orbits:</h4></label><br>
           <img src="img/deathstar.jpg"><br>
           <input type="radio" name="moon" value="Jupiter">Jupiter<br>
@@ -37,7 +43,7 @@
           <input type="radio" name="moon" value="deathstar">That's no moon! It's a space station...<br>
         </div>
 
-        <div class="form-group" id="user-interest">
+        <div class="form-group border border-secondary rounded" id="user-interest">
           <label for="interest"><h3>Which of these interest you?<h3></label><br>
           <input type="radio" name="interest" id="csharp" value="C">Making internal software components.<br>
           <input type="radio" name="interest" id="php" value="PHP">Coding a web server<br>
@@ -46,19 +52,23 @@
         <button type="submit" name="button" class="btn btn-primary" id="result">Submit</button>
       </form>
 
-      <div class="container" id="survey-finished">
+      <div class="container border border-success round" id="survey-finished">
         <h2 id="great-job"></h2>
         <p>Based on your answers and my advanced math calculations, I suggest you take the following course...</p>
       </div>
 
-      <div class="container" id="CDiv">
-        C#
+      <div class="container border border-info" id="CDiv">
+        <h2>C#</h2>
+        <p>C# is most popular among bigger established businesses, often for building internal software.</p>
+        <p>This language has been around for a while, and is used by Microsoft. If you like the idea of coding business software, this is the language for you!</p>
       </div>
-      <div class="container" id="PHPDiv">
-        PHP
+      <div class="container border border-info" id="PHPDiv">
+        <h2>PHP</h2>
+        <p>PHP is a server side web development language. It is used to make scripts for servers. If you want to build a server, this may be the language for you.</p>
       </div>
-      <div class="container" id="JDiv">
-        JavaScript
+      <div class="container border border-info" id="JDiv">
+        <h2>JavaScript</h2>
+        <p>JavaScript is a language developed at Netscape back in the 90's for the web. It is used to give websites lots of interactivity depending on what the user does. This website uses JavaScript! If doing all that interests you, I suggest you learn JavaScript.</p>
       </div>
     </div>
   </body>
