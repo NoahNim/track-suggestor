@@ -10,16 +10,9 @@ body {
 .border {
   margin-top: 50px;
   margin-bottom: 50px;
-  border-color: green;
+  border: green solid 1px;
 }
 
-.border-primary {
-  border-color: green;
-}
-
-.rounded {
-  border-color: green;
-}
 
 .btn {
   border-color: green;
@@ -28,6 +21,14 @@ body {
 .btn-primary {
   background-color: black;
   color: green;
+}
+
+#describe {
+  display: none;
+}
+
+#track-survey {
+  display: none;
 }
 
 #name-input {
