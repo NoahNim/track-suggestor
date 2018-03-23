@@ -56,6 +56,10 @@ input[type="text"], textarea {
   width: 120px;
 }
 
+#calculate {
+  display: none;
+}
+
 #survey-finished {
   display: none;
 }

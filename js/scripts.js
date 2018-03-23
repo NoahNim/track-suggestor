@@ -1,9 +1,8 @@
 $(document).ready(function() {
 
+  // Initial start up code, makes a button appear
   $("#track-survey").hide();
   $("#describe").hide();
-
-
   $("#start-button").click(function(event){
     $("#start-button").hide();
     $("#begin").fadeIn(2000);
@@ -41,31 +40,38 @@ $(document).ready(function() {
     $("#track-survey").fadeIn(3000);
   });
 
+  // This is the code that is run when the track-survey form button is clicked
   $("form#track-survey").submit(function(event){
     event.preventDefault();
 
     $("#begin").hide();
     $("#describe").hide();
-    $("#track-survey").hide();
+    $("#track-survey").fadeOut(5000);
 
     // These store user input on the webpage into JavaScript for use in this function
     var userInterest = $("div#user-interest input:checked").val();
     var userName = $("#user-name").val();
+    var userExp = $("#user-experience").val();
 
     // This will make the survey finished div appear
-    $("#survey-finished").fadeIn(3000);
+    $("#survey-finished").fadeIn(20000);
     $("#great-job").text("Awesome! " + userName + ",");
 
     // This is the if else statement that shows a div based on the users selection.
-    if (userInterest === "C") {
+    if (userInterest === "C" && userExp === "Yes") {
       $("#CDiv").show();
       $("#PHPDiv").hide();
       $("#JDiv").hide();
-    } else if (userInterest === "PHP") {
+    } else if (userInterest === "PHP" && userExp === "Yes") {
       $("#PHPDiv").show();
       $("#CDiv").hide();
       $("#JDiv").hide();
-    } else if (userInterest === "JS") {
+    } else if (userInterest === "JS" && userExp === "No" || userInterest === "PHP" && userExp === "No" || userInterest === "C" && userExp === "No") {
+      $("#JDiv").show();
+      $("#noob").show();
+      $("#PHPDiv").hide();
+      $("#CDiv").hide();
+    } else if (userInterest === "JS" && userExp === "Yes") {
       $("#JDiv").show();
       $("#PHPDiv").hide();
       $("#CDiv").hide();
