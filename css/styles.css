@@ -1,6 +1,10 @@
 body {
   background-color: black;
-  color: green;
+  color: #51ff44;
+}
+
+.fade-set {
+  display: none;
 }
 
 .container {
@@ -20,7 +24,20 @@ body {
 
 .btn-primary {
   background-color: black;
-  color: green;
+  color: #51ff44;
+}
+
+input[type="text"], textarea {
+  background-color: black;
+  color: #51ff44;
+}
+
+#start-div {
+  margin-top: 300px;
+}
+
+#begin {
+  display: none;
 }
 
 #describe {
