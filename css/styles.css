@@ -1,5 +1,6 @@
 body {
-  background-color: #bdd5fc;
+  background-color: black;
+  color: green;
 }
 
 .container {
@@ -9,6 +10,24 @@ body {
 .border {
   margin-top: 50px;
   margin-bottom: 50px;
+  border-color: green;
+}
+
+.border-primary {
+  border-color: green;
+}
+
+.rounded {
+  border-color: green;
+}
+
+.btn {
+  border-color: green;
+}
+
+.btn-primary {
+  background-color: black;
+  color: green;
 }
 
 #name-input {
