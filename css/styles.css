@@ -75,3 +75,9 @@ input[type="text"], textarea {
 #JDiv {
   display: none;
 }
+
+#exit-message {
+  display: none;
+  vertical-align: top;
+  text-align: left;
+}

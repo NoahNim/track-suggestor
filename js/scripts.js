@@ -3,6 +3,8 @@ $(document).ready(function() {
   // Initial start up code, makes a button appear
   $("#track-survey").hide();
   $("#describe").hide();
+  $("#exit-message").hide();
+  $("#survey-finished").hide();
   $("#start-button").click(function(event){
     $("#start-button").hide();
     $("#begin").fadeIn(2000);
@@ -76,5 +78,19 @@ $(document).ready(function() {
       $("#PHPDiv").hide();
       $("#CDiv").hide();
     }
+
+    $("#exit").fadeIn(25000)
+    $("#restart").fadeIn(25000)
+  });
+
+  // Fuctionality for when Exit or Restart is clicked
+  $("#restart").click(function(event){
+    $("#survey-finished").hide();
+    $("#start-button").show();
+  });
+
+  $("#exit").click(function(event){
+    $("#survey-finished").hide();
+    $("#exit-message").show();
   });
 });
