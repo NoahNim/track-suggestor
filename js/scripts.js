@@ -75,12 +75,24 @@ $(document).ready(function() {
       $("#CDiv").hide();
     } else if (userInterest === "JS" && userExp === "Yes") {
       $("#JDiv").show();
+      $("#noob").hide();
       $("#PHPDiv").hide();
       $("#CDiv").hide();
+    } else if (userInterest != "JS" || userInterest != "PHP" || userInterest != "C") {
+      $("#survey-finished").hide();
+      $("#error").show();
+      $("#error-ok").show();
+
     }
+
 
     $("#exit").fadeIn(25000)
     $("#restart").fadeIn(25000)
+  });
+
+  $("#error-ok").click(function(event){
+    $("#error").hide();
+    $("#track-survey").fadeIn(5000);
   });
 
   // Fuctionality for when Exit or Restart is clicked
